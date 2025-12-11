@@ -20,10 +20,7 @@
         </h1>
     </header>
     <nav id="nav">
-        <a href="index.html">Home</a>
-        <a href="wwr/index.html">WWR</a>
-        <a href="ice.html">ICE</a>
-        <a href="aboutme.html">About Me</a>
+        
     </nav>
     <main>
         <div id="home_grid">
@@ -156,17 +153,25 @@
             </a>
         </div>
     </main>
-    <footer>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="wwr/index.html">WWR</a></li>
-            <li><a href="ice.html">ICE</a></li>
-            <li><a href="aboutme.html">About Me</a></li>
-        </ul>
-        <p>
-            Copyright Camden Nair 2025 &copy
-        </p>
+    <footer id="footer">
+        
     </footer>
 </body>
+
+<script>
+    document.addEventListener("DOMContentLoaded",function(){
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("nav").innerHTML = data
+            });
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data
+            });
+    })
+</script>
+
 
 </html>
