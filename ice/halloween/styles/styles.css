@@ -1,0 +1,190 @@
+/* Add your CSS here to style your halloween page */
+@keyframes quiver {
+    0% {transform: rotate(0);}
+    25% {transform: rotate(0.5deg);}
+    50% {transform: rotate(0);}
+    75% {transform: rotate(-0.5deg);}
+    100% {transform: rotate(0);}
+}
+@keyframes quake {
+    0% {transform: rotate(0) }
+    25% {transform: rotate(0.8deg)  translateX(8px)}
+    50% {transform: rotate(0) scale(1.02, 1.02) translate(0px, 4px)}
+    75% {transform: rotate(-0.8deg) scale(0.98, 0.98) translateX(-8px)}
+    100% {transform: rotate(0) scale(1,1)}
+}
+
+@keyframes flicker {
+    0% {text-shadow: none; box-shadow: none;}
+    86%{text-shadow: none; box-shadow: none;}
+    90% {text-shadow: 1px 1px 2px white, 0 0 25px orange, 0 0 5px yellow;
+    box-shadow: 1px 1px 2px white, 0 0 25px orange, 0 0 5px yellow;}
+    96% {text-shadow: 1px 1px 2px white, 0 0 25px orange, 0 0 5px yellow;
+    box-shadow: 1px 1px 2px white, 0 0 25px orange, 0 0 5px yellow;}
+    100% {text-shadow: none; box-shadow: none;}
+}
+
+body{
+    background: #000;
+    background: url("../images/475j.gif");
+    background-size:cover;
+    
+}
+
+h1, h2, h3, h4, h5, h6, p, li{
+    color: orangered;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#wrapper{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: max-content 20px;
+    margin-top: -3%;
+    background: rgba(0,0,0,0.8);
+}
+
+header{
+    background: rgba(255,255,255,.3);
+    height: 100%;
+    margin: 0 0 0 -4%;
+    position: sticky;
+    top: 0;
+    border-right: 7px solid #23054a;
+    z-index: 0;
+    padding-left: 10px;
+    min-width: fit-content;
+}
+nav{
+    height: fit-content;
+    margin: 80px auto;
+    justify-self: center;
+    position: sticky;
+    top: 10px;
+}
+
+nav ul{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: fit-content;
+    row-gap: 30px;
+    list-style-type: none;
+    padding: 0;
+    min-width: fit-content;
+}
+nav ul li{
+    color: #23054a;
+    font-size: 1.5em;
+    animation-name: flicker;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    padding: 10px;
+    background: orangered;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 15px;
+    border: 3px solid #23054a;
+    width: 150px;
+    height: 25px;
+}
+
+li:nth-child(1){
+    animation-delay: 0;
+    position: sticky;
+}
+li:nth-child(2){
+    animation-delay: 0.4s; 
+}
+li:nth-child(3){
+    animation-delay: 0.8s;
+}
+li:nth-child(4){
+    animation-delay: 0.5s;
+}
+
+li:hover{
+    animation-name: unset;
+    text-shadow: 1px 1px 2px white, 0 0 25px orange, 0 0 5px yellow;
+    box-shadow: 1px 1px 2px white, 0 0 25px orange, 0 0 5px yellow;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 50px;
+}
+
+main h1{
+    grid-column: 1/4;
+    font-size: 4em;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    background: #23054a;
+    padding: 10px 0;
+    
+    margin-top: 0;
+    z-index: 1;
+}
+
+main img{
+    width: 60%;
+    margin: auto;
+    border: 4px solid orangered;
+    border-radius: 8%;
+    grid-column: 1/4;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    animation-name: quiver;
+    animation-duration: 150ms;
+    animation-iteration-count: infinite;
+    
+    transition: animation-name 2s ease-out;
+
+}
+
+main img:hover{
+    animation-name: quake;
+}
+
+footer{
+    grid-column: 1/3;
+    width: 100%;
+    background: orangered;
+    padding: 20px 5% 40px;
+    margin-left: -5%;
+    text-align: center;
+    z-index: 1;
+}
+
+main section{
+    width: 85%;
+    margin: auto;
+    border: 5px solid black;
+    border-radius: 50px;
+    background-color: rgba(255, 69, 0, 0.5);
+    height: 600px;
+    transition: ease-out;
+    transition-duration: 1.5s;
+}
+
+main section h1, main section h2, main section p{
+    color: #000;
+    text-shadow: 1px 1px 2px white, 0 0 25px orange, 0 0 5px yellow;
+    width: 75%;
+    margin: auto;
+    font-size: 1.5rem;
+}
+
+main section h2{
+    font-size: 2.3rem;
+    margin: 20px auto;
+    text-align: center;
+}
+
+main section:hover{
+    background-color: rgba(255, 69, 0, 1.0);
+    transition: ease-in;
+    transition-duration: 2s;
+}

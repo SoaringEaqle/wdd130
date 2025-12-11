@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostles Spotlights</title>
+    <style>
+        body{
+            background: #E8ECED;
+        }
+        #wrapper{
+            background: url("images/christus.webp");
+            border: 6px solid black;
+            height: 800px;
+            width: 85%;
+            min-width: fit-content;
+            margin: 0 auto;
+            border-radius: 80px;
+            background-size: cover;
+            background-position: 50% bottom;
+        }
+        #content{
+            margin-right: 10%;
+            margin-left: auto;
+            width: fit-content;
+        }
+        img{
+            height: 100px;
+            width: 100px;
+            object-fit: cover;
+            object-position: 100% 10%;
+            border-radius: 50%;
+            margin: 10px;
+            border: 5px solid white;
+        }
+        img:hover{
+            border-color: aqua;
+        }
+        #presidency{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto 1fr;
+            width: fit-content;
+            margin: auto;
+        }
+        #apostles{
+            display: grid;
+            grid-template-columns: 1fr 1fr  1fr  1fr;
+            grid-template-rows: auto 1fr  1fr 1fr;
+            width: fit-content;
+            margin: auto;
+        }
+        #presidency h3{
+            grid-row: 1/2;
+            grid-column-start: 1;
+            grid-column-end: -1;
+            text-align: center;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            font-weight: 300;
+            margin: 20px auto;
+        }
+        #oaks{
+            grid-column: 1/2;
+            grid-row: 2/3;
+            
+        }
+        #presidency #nelson{
+            height: 140px;
+            width: 140px;
+            object-position: 100% 100%;
+            grid-column: 2/3;
+        }
+        #presidency img{
+            height: 115px;
+            width: 115px;
+            margin: auto 15px;
+        }
+        #apostles h4{
+            text-align: center;
+            grid-row: 1/2;
+            grid-column: 1/-1;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            font-weight: 300;
+            margin: 20px auto;
+        }
+        @media  screen and (max-width: 900px) {
+            #wrapper{
+                margin: auto;
+                width: 95%;
+                background-position: 16%;
+                height: auto;
+            }
+            #content{
+                margin: auto;
+            }
+            #presidency{
+                margin-top: 65px;
+            }
+
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Insert HTML elements here -->
+     <div id="wrapper">
+        <div id="content">
+        <div id="presidency">
+            <h3>First Presidency</h3>
+            <img id="nelson" src="images/nelson.webp" alt="Nelson">
+            <img id="oaks" src="images/oaks.webp" alt="Oaks">
+            <img id="eyring" src="images/eyring.webp" alt="Eyring">
+        </div>
+        <div id="apostles">
+            <h4>Quorum of the Twelve Apostles</h4>
+            <img src="images/holland.webp" alt="Holland">
+            <img src="images/uchtdorf.webp" alt="Uchtdorf">
+            <img src="images/bednar.webp" alt="bednar">
+            <img src="images/cook.webp" alt="cook">
+            <img src="images/christofferson.webp" alt="christofferson">
+            <img src="images/anderson.webp" alt="anderson">
+            <img src="images/rasband.webp" alt="rasband">
+            <img src="images/stevenson.webp" alt="stevenson">
+            <img src="images/renlund.webp" alt="renlund">
+            <img src="images/gong.webp" alt="gong">
+            <img src="images/soares.webp" alt="soares">
+            <img src="images/kearon.webp" alt="kearon">
+        </div>
+     </div>
+     </div>
+</body>
+</html>
